@@ -1,7 +1,17 @@
 @import "tailwindcss";
 
+/* Html classına dark verme durumuna göre temayı ayarlar */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
   .container {
-    @apply max-w-7xl mx-auto px-4sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
   }
 }
