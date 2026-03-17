@@ -35,10 +35,23 @@ const Home = () => {
         setRefreshing(false);
       });
   }, []);
-
+//İlk yüklenme anında verileri çek
   useEffect(() => {
     fetchCoins();
   }, []);
+
+
+  // Otomatik yenileme - 30 sn bir verileri çeksin
+  useEffect(() => {
+   const id = setInterval(() => {
+      fetchCoins(true);
+    }, 30000);
+// compunentin ekranda ayrılma anında sayıcı durdur
+    return () => {clearInterval(id)};
+
+   
+  }, []);
+
   // Hata durumu
   if (error) return <Error message={error} refetch={fetchCoins} />;
 
