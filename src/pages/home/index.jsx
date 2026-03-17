@@ -6,6 +6,7 @@ import { RefreshCw, TrendingUp } from "lucide-react";
 import InfoCard from "../../components/home/info-card";
 import Loader from "../../components/loader/index";
 import CoinCard from "../../components/home/coin-card";
+import Refresh from "./refresh";
 
 
 const Home = () => {
@@ -126,7 +127,7 @@ const Home = () => {
       )}
 
       {/* Yenilenme durumu */}
-     
+      <Refresh show={refreshing} />
     </div>
   );
 };
