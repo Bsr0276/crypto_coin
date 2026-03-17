@@ -1,4 +1,5 @@
 import { Key, Star, TrendingDown, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   formatPrice,
   formatBigNumber,
@@ -55,7 +56,10 @@ const CoinCard = ({ coin }) => {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shodow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 ">
+    <Link
+      to={`/coin/${coin.id}`}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shodow-lg p-6 cursor-pointer hover:scale-105 transform transition duration-300 "
+    >
       {/* Üst kısım */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">
@@ -114,7 +118,7 @@ const CoinCard = ({ coin }) => {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
