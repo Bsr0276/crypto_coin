@@ -8,7 +8,6 @@ import Loader from "../../components/loader/index";
 import CoinCard from "../../components/home/coin-card";
 import Refresh from "./refresh";
 
-
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -61,7 +60,11 @@ const Home = () => {
 
     const term = searchTerm.toLowerCase();
 
-    return coins.filter((coin) => coin.name.toLowerCase().includes(term) || coin.symbol.toLowerCase().includes(term));
+    return coins.filter(
+      (coin) =>
+        coin.name.toLowerCase().includes(term) ||
+        coin.symbol.toLowerCase().includes(term),
+    );
   }, [coins, searchTerm]);
 
   // arama durumunda çalışıcak fonksiyon
@@ -77,8 +80,12 @@ const Home = () => {
       {/* Başlık */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Kripto Para Piyasası</h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-1">En popüler kripto para birimleri</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+            Kripto Para Piyasası
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 mt-1">
+            En popüler kripto para birimleri
+          </p>
         </div>
 
         {/* Arama ve Yenileme */}
@@ -89,18 +96,26 @@ const Home = () => {
             onClick={() => fetchCoins(true)}
             className="p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
           >
-            <RefreshCw className={`size-5  ${refreshing ? "animate-spin" : ""}}`} />
+            <RefreshCw
+              className={`size-5  ${refreshing ? "animate-spin" : ""}}`}
+            />
           </button>
         </div>
       </div>
 
       {/* İstatistikler */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <InfoCard label="Toplam Coin" value={coins.length} icon={<TrendingUp className="size-8 text-blue-500" />} />
+        <InfoCard
+          label="Toplam Coin"
+          value={coins.length}
+          icon={<TrendingUp className="size-8 text-blue-500" />}
+        />
 
         <InfoCard
           label="Son Güncelleme"
-          value={lastUpdated ? lastUpdated.toLocaleTimeString("tr") : "Yükleniyor.."}
+          value={
+            lastUpdated ? lastUpdated.toLocaleTimeString("tr") : "Yükleniyor.."
+          }
           icon={<RefreshCw className="size-8 text-green-500" />}
         />
 
