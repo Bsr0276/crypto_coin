@@ -1,3 +1,8 @@
+
+![Uploading Adsız tasarım.gif…]()
+
+
+
 💰 CRYPTO & COINS (REACT + VITE)
 
 Modern React ve Vite kullanılarak geliştirilmiş, kripto para piyasasını anlık olarak takip etmeyi sağlayan dinamik ve responsive bir dashboard uygulamasıdır.
