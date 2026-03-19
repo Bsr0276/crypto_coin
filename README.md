@@ -1,7 +1,8 @@
 💰 CRYPTO & COINS (REACT + VITE)
 
 Modern React ve Vite kullanılarak geliştirilmiş, kripto para piyasasını anlık olarak takip etmeyi sağlayan dinamik ve responsive bir dashboard uygulamasıdır.
-Gerçek zamanlıya yakın veriler ile kullanıcıya hızlı, sade ve anlaşılır piyasa takibi sunar.
+Gerçek zamanlıya yakın veriler ile kullanıcıya hızlı, sade ve anlaşılır piyasa takibi sunar. 
+
 
 🚀 PROJE ÖZELLİKLERİ
 
@@ -20,6 +21,7 @@ Gerçek zamanlıya yakın veriler ile kullanıcıya hızlı, sade ve anlaşılı
 ⭐ Favorilere ekleme (UI)
 
 📱 Responsive tasarım (mobil uyumlu)
+
 
 🛠️ KULLANILAN TEKNOLOJİLER
 
@@ -43,6 +45,7 @@ Gerçek zamanlıya yakın veriler ile kullanıcıya hızlı, sade ve anlaşılı
 
 📁 utils → Yardımcı fonksiyonlar
 
+
 🔌 API ENTEGRASYONU
 
 Uygulama, kripto para verilerini CoinGecko API üzerinden çekmektedir:
@@ -56,6 +59,7 @@ Uygulama, kripto para verilerini CoinGecko API üzerinden çekmektedir:
 📉 24 saatlik değişim oranları
 
 Tüm veri işlemleri merkezi bir yapı üzerinden yönetilmektedir.
+
 
 🎯 BU PROJEDE PRATİK EDİLEN KONULAR
 
